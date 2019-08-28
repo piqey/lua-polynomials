@@ -1,14 +1,34 @@
+--[[
+	lua-polynomials is a Lua module created by piqey
+	(John Kushmer) for finding the roots of second,
+	third and fourth degree polynomials.
+--]]
+
 module("polynomials")
 
-local eps = 1e-9
+-- Utility functions
 
+local eps = 1e-9 -- definitely small enough
+
+-- checks if d is close enough to 0 to beconsidered 0 (for our purposes)
 local function isZero(d)
 	return (d > -eps and d < eps)
 end
 
+-- fixes an issue with math.pow that returns nan when the result should be a real number
 local function cuberoot(x)
 	return (x > 0) and math.pow(x, (1 / 3)) or -math.pow(math.abs(x), (1 / 3))
 end
+
+--[[
+	solveQuadric(number a, number b, number c)
+	returns number s0, number s1
+
+	Will return nil for roots that do not exist.
+
+	Solves for the roots of quadric/quadratic polynomials of the following form:
+	ax^2 + bx + c = 0
+--]]
 
 function solveQuadric(c0, c1, c2)
 	local s0, s1
@@ -34,6 +54,16 @@ function solveQuadric(c0, c1, c2)
 		return s0, s1
 	end
 end
+
+--[[
+	solveCubic(number a, number b, number c, number d)
+	returns number s0, number s1, number s2
+
+	Will return nil for roots that do not exist.
+
+	Solves for the roots of cubic polynomials of the following form:
+	ax^3 + bx^2 + cx + d = 0
+--]]
 
 function solveCubic(c0, c1, c2, c3)
 	local s0, s1, s2
@@ -98,6 +128,16 @@ function solveCubic(c0, c1, c2, c3)
 
 	return s0, s1, s2
 end
+
+--[[
+	solveQuartic(number a, number b, number c, number d, number e)
+	returns number s0, number s1, number s2, number s3
+
+	Will return nil for roots that do not exist.
+
+	Solves for the roots of quartic polynomials of the form:
+	ax^4 + bx^3 + cx^2 + dx + e = 0
+--]]
 
 function solveQuartic(c0, c1, c2, c3, c4)
 	local s0, s1, s2, s3
