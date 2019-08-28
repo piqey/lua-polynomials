@@ -1,3 +1,5 @@
+local math = math
+
 --[[
 	lua-polynomials is a Lua module created by piqey
 	(John Kushmer) for finding the roots of second,
