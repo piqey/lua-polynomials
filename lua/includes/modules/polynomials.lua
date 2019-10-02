@@ -2,8 +2,8 @@ local math = math
 
 --[[
 	lua-polynomials is a Lua module created by piqey
-	(John Kushmer) for finding the roots of second,
-	third and fourth degree polynomials.
+	(John Kushmer) for finding the roots of third-,
+	fourth- and fifth-degree polynomials.
 --]]
 
 module("polynomials")
@@ -17,8 +17,8 @@ module("polynomials")
 	and Ferrari's method for all of that).
 --]]
 
-__VERSION = "1.0.0" -- https://semver.org/
-__DESCRIPTION = "Methods for finding the roots of traditional- and higher-degree polynomials."
+__VERSION = "1.0.1" -- https://semver.org/
+__DESCRIPTION = "Methods for finding the roots of traditional- and higher-degree polynomials (3rd to 5th degree)."
 __URL = "https://github.com/piqey/lua-polynomials"
 __LICENSE = "GNU General Public License, version 3"
 
