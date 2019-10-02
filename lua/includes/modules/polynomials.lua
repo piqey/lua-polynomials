@@ -8,6 +8,20 @@ local math = math
 
 module("polynomials")
 
+--[[
+	Just decorating our package for any programmers
+	that might possibly be snooping around in here;
+	you know, trying to understand and harness the
+	potential of all the black magic that's been
+	packed in here (you can thank Cardano's formula
+	and Ferrari's method for all of that).
+--]]
+
+__VERSION = "1.0.0" -- https://semver.org/
+__DESCRIPTION = "Methods for finding the roots of traditional- and higher-degree polynomials."
+__URL = "https://github.com/piqey/lua-polynomials"
+__LICENSE = "GNU General Public License, version 3"
+
 -- Utility functions
 
 local eps = 1e-9 -- definitely small enough
