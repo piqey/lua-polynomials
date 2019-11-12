@@ -26,7 +26,7 @@ __LICENSE = "GNU General Public License, version 3"
 
 local eps = 1e-9 -- definitely small enough
 
--- checks if d is close enough to 0 to beconsidered 0 (for our purposes)
+-- checks if d is close enough to 0 to be considered 0 (for our purposes)
 local function isZero(d)
 	return (d > -eps and d < eps)
 end
